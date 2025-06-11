@@ -24,7 +24,7 @@ jobs:
 
     - name: Run Tests
       run: |
-        pytest tests/
+        PYTHONPATH=$(pwd) pytest tests/
 
   docker:
       needs: build-and-test
